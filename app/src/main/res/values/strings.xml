@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NutritionApplication</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logo">Logo</string>
+    <string name="forgotpass">Не помнишь пароль?</string>
+    <string name="nutrition_handbook">Nutrition handbook</string>
+    <string name="proteins">PROTEINS</string>
+    <string name="nutrition_s_description">Nutrition\'s description</string>
+
+
+    <string name="cardVitamin">vitamin %s</string>
+
+</resources>

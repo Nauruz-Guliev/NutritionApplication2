@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:id="@+id/vitamins2"
+        android:enabled="true"
+        android:title="Vitamins"
+        android:icon="@drawable/ic_vegetable"
+        />
+    <item
+        android:id="@+id/minerals2"
+        android:enabled="true"
+        android:title="Minerals"
+        android:icon="@drawable/ic_minerals"
+        />
+
+    <item
+        android:id="@+id/proteins2"
+        android:enabled="true"
+        android:title="Proteins"
+        android:icon="@drawable/ic_meat"
+        />
+</menu>

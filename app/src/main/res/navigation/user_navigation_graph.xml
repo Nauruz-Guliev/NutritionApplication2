@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_navigation_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.nutritionapplication.fragments.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationScreen"
+        android:name="com.example.nutritionapplication.fragments.RegistrationScreen"
+        android:label="fragment_registration_screen"
+        tools:layout="@layout/fragment_registration_screen" />
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.example.nutritionapplication.fragments.LoginScreen"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreen_to_vitamins2"
+            app:destination="@id/vitamins2"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/loginScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginScreen_to_registrationScreen"
+            app:destination="@id/registrationScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/vitamins2"
+        android:name="com.example.nutritionapplication.nutritionAppMainFunctionality.nutritionFragments.Vitamins"
+        android:label="ВИТАМИНЫ"
+        tools:layout="@layout/fragment_vitamins" >
+        <action
+            android:id="@+id/action_vitamins2_to_card_content"
+            app:destination="@id/card_content"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/proteins2"
+        android:name="com.example.nutritionapplication.nutritionAppMainFunctionality.nutritionFragments.Proteins"
+        android:label="ПРОТЕИНЫ"
+        tools:layout="@layout/fragment_proteins" >
+        <action
+            android:id="@+id/action_proteins2_to_card_content"
+            app:destination="@id/card_content"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/minerals2"
+        android:name="com.example.nutritionapplication.nutritionAppMainFunctionality.nutritionFragments.Minerals"
+        android:label="МИНЕРАЛЫ"
+        tools:layout="@layout/fragment_minerals" >
+        <action
+            android:id="@+id/action_minerals2_to_card_content"
+            app:destination="@id/card_content"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/card_content"
+        android:name="com.example.nutritionapplication.nutritionAppMainFunctionality.recyclerViewLogicPackage.vitamins.VitaminsContent"
+        android:label="Подробное описание витамина:"
+        tools:layout="@layout/fragment_vitamins_card_content" >
+        <argument
+            android:name="vitamin"
+            app:argType="com.example.nutritionapplication.nutritionAppMainFunctionality.recyclerViewLogicPackage.vitamins.VitaminsItem" />
+    </fragment>
+</navigation>
